@@ -17,6 +17,7 @@ public class Fondo {
 
 	public Fondo (Juego jueguito) {
 		this.jueguito= jueguito;
+                
 	}
         
 	public void mover() {
