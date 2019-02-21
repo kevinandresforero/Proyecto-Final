@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 public class Juego extends JPanel{
     
-    Personaje personaje1 = new Personaje(this);
+    Personaje personaje1 = new Personaje(this) {};
     Obstaculo obstaculo1 = new Obstaculo(this);
     Fondo nubecita = new Fondo(this);
     
@@ -41,7 +41,6 @@ public class Juego extends JPanel{
         nubecita.mover();
     }
     
-
     @Override
     public void paintComponent(Graphics g) {
        
@@ -57,8 +56,7 @@ public class Juego extends JPanel{
         g.setColor(Color.BLUE);
         nubecita.paint(g); 
 
-        g.setColor(Color.BLACK);
-        personaje1.paint(g);
+       
 
         g.setColor(Color.red);
         obstaculo1.paint(g);

@@ -1,17 +1,22 @@
 
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
 
-public class Personaje {
+
+
+
+public abstract class Personaje {
    
 	int ancho = 50;
 	int alto = 50;
 	int x = 10;
         int y = 350;
-	int x1 = 0;
+	int x1 = 0;  
         int y1=0;
-	private Juego jueguito;
+	private final Juego jueguito;
         boolean saltando=false;
         boolean sube=false;
         boolean baja=false;
@@ -53,9 +58,7 @@ public class Personaje {
                 }
         }
 
-	public void paint(Graphics2D g) {
-		g.fillRect(x, y, ancho, alto);
-        }
+	
 
 	public void keyPressed(KeyEvent e) {
 		
@@ -67,5 +70,8 @@ public class Personaje {
         
 	public Rectangle getBounds() {
 		return new Rectangle(x+5, y+y1, ancho, alto);
+                
 	}
+        
+        
 }
